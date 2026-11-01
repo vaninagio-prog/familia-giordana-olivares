@@ -7,6 +7,7 @@
 
   // ---- Idiomas (es / en / zh). Textos en assets/js/i18n.js ----
   var I18N = window.I18N || { es: {} };
+  if (!window.I18N) { var lgBox = document.querySelector('.lang'); if (lgBox) lgBox.style.display = 'none'; }
   var LANGS = { es: 'es-AR', en: 'en', zh: 'zh-Hans' };
   var lang = 'es';
   var t = function (k) { return (I18N[lang] && I18N[lang][k] != null) ? I18N[lang][k] : (I18N.es[k] || ''); };
