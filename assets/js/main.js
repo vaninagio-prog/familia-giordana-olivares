@@ -12,9 +12,9 @@
     });
   }
 
-  // Header: siempre sólido; solo agrega sombra al hacer scroll
+  // Header al hacer scroll
   var header = document.querySelector('.site-header');
-  var onScroll = function () { header.classList.toggle('shadow', window.scrollY > 10); };
+  var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 40); };
   onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
 
   // Menú móvil
