@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/hero-olivares.webp">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261101b">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261101c">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,6 +58,7 @@
         <button type="button" data-lang="en" lang="en" aria-pressed="false" title="English">EN</button>
         <button type="button" data-lang="zh" lang="zh-Hans" aria-pressed="false" title="简体中文">中文</button>
       </div>
+      <button type="button" class="cart-btn" aria-controls="cart" aria-expanded="false" aria-label="Abrir carrito" data-i18n-aria-label="cart.open"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg><span class="cart-count" aria-live="polite" hidden>0</span></button>
       <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-i18n-aria-label="aria.menuOpen">
         <span></span><span></span><span></span>
       </button>
@@ -149,7 +150,7 @@
               <p class="product__tag" data-i18n="prod.arb.tag">Suave y delicado</p>
               <details class="notes-wrap"><summary data-i18n="prod.notes">Perfil y maridajes</summary><div class="notes-body"><dl class="notes"><dt data-i18n="prod.profile">Perfil</dt><dd data-i18n="prod.arb.profile">Frutado suave: manzana, hierbas frescas, almendra. Dulce, poco amargo y picante.</dd><dt data-i18n="prod.pairings">Maridajes</dt><dd data-i18n="prod.arb.pair">Ensaladas, puré, zapallo, repostería.</dd></dl></div></details>
               <p class="product__price"><span>$22.499,99</span></p>
-              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-arbequina-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Arbequina 500 cc." data-i18n-data-wa-msg="wa.arb">WhatsApp</a></div>
+              <div class="buy" data-sku="arb" data-name="Giordana Arbequina 500 cc" data-price="22499.99"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div><div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-arbequina-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Arbequina 500 cc." data-i18n-data-wa-msg="wa.arb">WhatsApp</a></div>
             </div>
           </article>
 
@@ -160,7 +161,7 @@
               <p class="product__tag" data-i18n="prod.cor.tag">Intenso y complejo</p>
               <details class="notes-wrap"><summary data-i18n="prod.notes">Perfil y maridajes</summary><div class="notes-body"><dl class="notes"><dt data-i18n="prod.profile">Perfil</dt><dd data-i18n="prod.cor.profile">Muy aromático: pasto, achicoria, rúcula, pimienta verde. Intenso, amargo y picante medios.</dd><dt data-i18n="prod.pairings">Maridajes</dt><dd data-i18n="prod.cor.pair">Carnes rojas, cordero, cerdo, verduras asadas, pastas.</dd></dl></div></details>
               <p class="product__price"><span>$22.499,99</span></p>
-              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-coratina-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Coratina 500 cc." data-i18n-data-wa-msg="wa.cor">WhatsApp</a></div>
+              <div class="buy" data-sku="cor" data-name="Giordana Coratina 500 cc" data-price="22499.99"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div><div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-coratina-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Coratina 500 cc." data-i18n-data-wa-msg="wa.cor">WhatsApp</a></div>
             </div>
           </article>
 
@@ -171,7 +172,7 @@
               <p class="product__tag" data-i18n="prod.pic.tag">Estructurado y persistente</p>
               <details class="notes-wrap"><summary data-i18n="prod.notes">Perfil y maridajes</summary><div class="notes-body"><dl class="notes"><dt data-i18n="prod.profile">Perfil</dt><dd data-i18n="prod.pic.profile">Frutado verde intenso: hoja de olivo, higuera, alcachofa, cítricos. Ligero amargo y picante.</dd><dt data-i18n="prod.pairings">Maridajes</dt><dd data-i18n="prod.pic.pair">Jamones, quesos, salteados, frituras (hasta 180&nbsp;°C).</dd></dl></div></details>
               <p class="product__price"><span>$22.499,99</span></p>
-              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-picual-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Picual 500 cc." data-i18n-data-wa-msg="wa.pic">WhatsApp</a></div>
+              <div class="buy" data-sku="pic" data-name="Giordana Picual 500 cc" data-price="22499.99"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div><div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-picual-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Picual 500 cc." data-i18n-data-wa-msg="wa.pic">WhatsApp</a></div>
             </div>
           </article>
 
@@ -182,7 +183,7 @@
               <p class="product__tag" data-i18n="prod.ble.tag">Equilibrado y fresco</p>
               <details class="notes-wrap"><summary data-i18n="prod.notes">Perfil y maridajes</summary><div class="notes-body"><dl class="notes"><dt data-i18n="prod.profile">Perfil</dt><dd data-i18n="prod.ble.profile">Frutado verde medio: hierbas, almendra, tomate, pimienta. Amargo y picante equilibrados.</dd><dt data-i18n="prod.pairings">Maridajes</dt><dd data-i18n="prod.ble.pair">Ensaladas verdes, verduras al vapor, pescados, carnes blancas.</dd></dl></div></details>
               <p class="product__price"><span>$22.499,99</span></p>
-              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Blend 500 cc." data-i18n-data-wa-msg="wa.ble">WhatsApp</a></div>
+              <div class="buy" data-sku="ble" data-name="Giordana Blend 500 cc" data-price="22499.99"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div><div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Blend 500 cc." data-i18n-data-wa-msg="wa.ble">WhatsApp</a></div>
             </div>
           </article>
         </div>
@@ -190,6 +191,11 @@
         <div class="shop-cta reveal">
           <p data-i18n="prod.refPrices">Precios de referencia en Roldán Online.</p>
           <a class="btn" href="https://roldanonline.com.ar/Categorias/giordana-olivares/" target="_blank" rel="noopener" data-i18n="prod.buyOnline">Comprar online en Roldán ↗</a>
+        </div>
+
+        <div class="how reveal">
+          <h3 data-i18n="how.title">Cómo comprar</h3>
+          <p data-i18n="how.text">Sumá los productos al carrito y confirmá el pedido: se abre WhatsApp con el detalle listo para enviar. Te respondemos con el total final y el link de pago de Mercado Pago (tarjeta, QR o dinero en cuenta). Enviamos por Correo Argentino o Andreani, o podés retirar en Sinsacate (Córdoba) o en la finca de Vichigasta (La Rioja).</p>
         </div>
 
         <div class="lines">
@@ -200,11 +206,11 @@
             <div class="line-card__items">
               <figure>
                 <img src="assets/img/bb5l_2.webp" alt="Bidón de 5 litros de aceite de oliva Don Dileto" data-i18n-alt="alt.dd5" loading="lazy" width="256" height="256">
-                <figcaption><strong>Don Dileto 5 L</strong><span data-i18n="dd.5l">Frutado verde medio, equilibrado.</span><span class="mini-price">$121.999,99</span><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-extra-virgen-dondileto-5lt/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a></figcaption>
+                <figcaption><strong>Don Dileto 5 L</strong><span data-i18n="dd.5l">Frutado verde medio, equilibrado.</span><span class="mini-price">$121.999,99</span><div class="buy buy--compact" data-sku="dd5" data-name="Don Dileto 5 L" data-price="121999.99"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-extra-virgen-dondileto-5lt/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a></figcaption>
               </figure>
               <figure>
                 <img src="assets/img/dondileto-coratina.webp" alt="Bidón de 2 litros de aceite de oliva Don Dileto" data-i18n-alt="alt.dd2" loading="lazy" width="448" height="454">
-                <figcaption><strong>Don Dileto 2 L</strong><span data-i18n="dd.2l">Extra virgen.</span><span class="mini-price">$51.999,99</span><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-extra-virgen-dondileto-2lt/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a></figcaption>
+                <figcaption><strong>Don Dileto 2 L</strong><span data-i18n="dd.2l">Extra virgen.</span><span class="mini-price">$51.999,99</span><div class="buy buy--compact" data-sku="dd2" data-name="Don Dileto 2 L" data-price="51999.99"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-extra-virgen-dondileto-2lt/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a></figcaption>
               </figure>
             </div>
             <a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Don Dileto." data-i18n-data-wa-msg="wa.dd" data-i18n="ask.wa">Consultar por WhatsApp</a>
@@ -229,10 +235,10 @@
             <div class="olive-shop">
               <p class="olive-shop__title" data-i18n="ol.roldan">En Roldán Online, 1,5&nbsp;kg</p>
               <ul>
-                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r1">Aceitunas verdes ↗</span><b>$14.199,99</b></a></li>
-                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-descarozadas-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r2">Verdes descarozadas ↗</span><b>$15.999,99</b></a></li>
-                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-rodajas-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r3">Verdes en rodajas ↗</span><b>$15.999,99</b></a></li>
-                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-con-morron-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r4">Verdes con morrón ↗</span><b>$17.799,99</b></a></li>
+                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r1">Aceitunas verdes ↗</span><b>$14.199,99</b></a><div class="buy buy--compact" data-sku="ol1" data-name="Aceitunas verdes Don Dileto 1,5 kg" data-price="14199.99" data-name-key="cart.n.ol1"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div></li>
+                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-descarozadas-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r2">Verdes descarozadas ↗</span><b>$15.999,99</b></a><div class="buy buy--compact" data-sku="ol2" data-name="Aceitunas verdes descarozadas Don Dileto 1,5 kg" data-price="15999.99" data-name-key="cart.n.ol2"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div></li>
+                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-rodajas-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r3">Verdes en rodajas ↗</span><b>$15.999,99</b></a><div class="buy buy--compact" data-sku="ol3" data-name="Aceitunas verdes en rodajas Don Dileto 1,5 kg" data-price="15999.99" data-name-key="cart.n.ol3"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div></li>
+                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-con-morron-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r4">Verdes con morrón ↗</span><b>$17.799,99</b></a><div class="buy buy--compact" data-sku="ol4" data-name="Aceitunas verdes con morrón Don Dileto 1,5 kg" data-price="17799.99" data-name-key="cart.n.ol4"><div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Restar uno" data-i18n-aria-label="cart.less">−</button><input type="number" class="qty__in" value="1" min="1" max="99" inputmode="numeric" aria-label="Cantidad" data-i18n-aria-label="cart.qty"><button type="button" class="qty__btn" data-step="1" aria-label="Sumar uno" data-i18n-aria-label="cart.more">+</button></div><button type="button" class="btn btn--small add-cart" data-i18n="cart.add">Agregar al carrito</button></div></li>
               </ul>
             </div>
             <a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por las aceitunas Don Dileto." data-i18n-data-wa-msg="wa.ol" data-i18n="ask.wa">Consultar por WhatsApp</a>
@@ -301,7 +307,7 @@
           <h3 data-i18n="form.title">Consulta por WhatsApp</h3>
           <div class="field-row">
             <label><span data-i18n="form.name">Nombre</span><input name="nombre" required autocomplete="name"></label>
-            <label><span data-i18n="form.company">Empresa</span> <span class="opt" data-i18n="form.optional">(opcional)</span><input name="empresa" autocomplete="organization"></label>
+            <label><span class="lbl"><span data-i18n="form.company">Empresa</span> <span class="opt" data-i18n="form.optional">(opcional)</span></span><input name="empresa" autocomplete="organization"></label>
           </div>
           <div class="field-row">
             <label><span data-i18n="form.country">País</span><input name="pais" autocomplete="country-name" value="Argentina"></label>
@@ -361,7 +367,80 @@
     <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
   </a>
 
-  <script src="assets/js/i18n.js?v=20261101b" defer></script>
-  <script src="assets/js/main.js?v=20261101b" defer></script>
+
+  <!-- CARRITO / PEDIDO (sin servidor: el pedido se envía por WhatsApp). Configuración en assets/js/main.js -->
+  <div class="cart-overlay" hidden></div>
+  <aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <div class="cart__head">
+      <h2 id="cart-title" data-i18n="cart.title">Tu pedido</h2>
+      <button type="button" class="cart__close" aria-label="Cerrar carrito" data-i18n-aria-label="cart.close"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="cart__scroll">
+      <div class="cart__view" data-view="cart">
+        <p class="cart__empty" data-i18n="cart.empty">Tu carrito está vacío. Sumá productos desde la sección Productos.</p>
+        <ul class="cart__items"></ul>
+        <div class="cart__sum"><span data-i18n="cart.subtotal">Subtotal</span><strong class="cart__subtotal">$0,00</strong></div>
+        <p class="cart__fine" data-i18n="cart.fine">Precios de referencia en pesos argentinos (ARS). El envío se cotiza aparte.</p>
+
+        <form class="checkout" novalidate>
+          <h3 data-i18n="co.title">Tus datos</h3>
+          <label><span data-i18n="co.name">Nombre y apellido</span><input name="nombre" required autocomplete="name"></label>
+          <div class="field-row">
+            <label><span data-i18n="co.phone">Teléfono</span><input name="telefono" type="tel" required autocomplete="tel" inputmode="tel"></label>
+            <label><span class="lbl"><span data-i18n="co.email">Email</span> <span class="opt" data-i18n="form.optional">(opcional)</span></span><input name="email" type="email" autocomplete="email"></label>
+          </div>
+
+          <fieldset class="co-group">
+            <legend data-i18n="co.delivery">Entrega</legend>
+            <label class="radio"><input type="radio" name="entrega" value="envio" required><span data-i18n="co.ship">Envío por correo (Correo Argentino / Andreani)</span></label>
+            <div class="co-extra" data-for="envio" hidden>
+              <label><span data-i18n="co.address">Dirección</span><input name="direccion" autocomplete="street-address" data-req></label>
+              <div class="field-row">
+                <label><span data-i18n="co.city">Localidad</span><input name="localidad" autocomplete="address-level2" data-req></label>
+                <label><span data-i18n="co.province">Provincia</span><input name="provincia" autocomplete="address-level1" data-req></label>
+              </div>
+              <label class="co-zip"><span data-i18n="co.zip">Código postal</span><input name="cp" autocomplete="postal-code" data-req></label>
+              <p class="co-note js-ship-note" data-i18n="co.shipNote">Costo de envío a cotizar.</p>
+            </div>
+            <label class="radio"><input type="radio" name="entrega" value="sinsacate"><span data-i18n="co.pickSin">Retiro en Sinsacate (Córdoba)</span></label>
+            <div class="co-extra" data-for="sinsacate" hidden>
+              <p class="co-addr js-pick-addr" data-pick="sinsacate"></p>
+              <p class="co-note" data-i18n="co.pickCoord">Coordinamos el día y horario de retiro por WhatsApp.</p>
+            </div>
+            <label class="radio"><input type="radio" name="entrega" value="vichigasta"><span data-i18n="co.pickVic">Retiro en Vichigasta (La Rioja)</span></label>
+            <div class="co-extra" data-for="vichigasta" hidden>
+              <p class="co-addr js-pick-addr" data-pick="vichigasta"></p>
+              <p class="co-note"><span data-i18n="contact.hoursLabel">Horario de atención</span>: <span data-i18n="contact.hours">Lunes a jueves de 6:30 a 16, viernes de 6:30 a 15. Sábados y domingos, cerrado.</span></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="co-group">
+            <legend data-i18n="co.payment">Forma de pago</legend>
+            <label class="radio"><input type="radio" name="pago" value="card" required><span data-i18n="co.payCard">Tarjeta de crédito o débito</span></label>
+            <label class="radio"><input type="radio" name="pago" value="qr"><span data-i18n="co.payQr">QR</span></label>
+            <label class="radio"><input type="radio" name="pago" value="account"><span data-i18n="co.payAcc">Dinero en cuenta</span></label>
+            <p class="co-note" data-i18n="co.payNote">Todos los pagos son por Mercado Pago. Te mandamos el link de pago por WhatsApp.</p>
+          </fieldset>
+
+          <label><span class="lbl"><span data-i18n="co.notes">Comentarios</span> <span class="opt" data-i18n="form.optional">(opcional)</span></span><textarea name="notas" rows="2"></textarea></label>
+          <p class="co-err" role="alert"></p>
+          <button type="submit" class="btn btn--wa btn--full" data-i18n="co.submit">Confirmar pedido</button>
+          <p class="co-note co-center" data-i18n="co.submitNote">Se abre WhatsApp con el detalle del pedido para que lo envíes.</p>
+        </form>
+      </div>
+
+      <div class="cart__view cart__done" data-view="done" hidden>
+        <h3 data-i18n="done.title">¡Pedido listo para enviar!</h3>
+        <p data-i18n="done.text">Te respondemos por WhatsApp con el total final y el link de pago de Mercado Pago (tarjeta, QR o dinero en cuenta).</p>
+        <p class="co-note" data-i18n="done.hint">Si WhatsApp no se abrió, tocá el botón.</p>
+        <a class="btn btn--wa btn--full js-done-wa" href="#" target="_blank" rel="noopener" data-i18n="done.reopen">Abrir WhatsApp</a>
+        <a class="btn btn--full js-mp" href="#" target="_blank" rel="noopener" hidden data-i18n="done.mp">Pagar con Mercado Pago</a>
+        <button type="button" class="btn btn--outline btn--full js-done-close" data-i18n="done.back">Seguir en el sitio</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="assets/js/i18n.js?v=20261101c" defer></script>
+  <script src="assets/js/main.js?v=20261101c" defer></script>
 </body>
 </html>
