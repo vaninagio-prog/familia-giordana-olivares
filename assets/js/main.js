@@ -4,7 +4,6 @@
   // Cada botón puede definir su propio mensaje con data-wa-msg.
   var WHATSAPP_NUMBER = '5493825524949'; // +54 9 3825 52-4949
   var WHATSAPP_MSG = 'Hola Familia Giordana, quiero hacer una consulta sobre sus productos.';
-  var EMAIL = 'familiagiordanaolivos@gmail.com';
 
   if (WHATSAPP_NUMBER) {
     document.querySelectorAll('.js-wa').forEach(function (a) {
@@ -13,9 +12,9 @@
     });
   }
 
-  // Header al hacer scroll
+  // Header: siempre sólido; solo agrega sombra al hacer scroll
   var header = document.querySelector('.site-header');
-  var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 40); };
+  var onScroll = function () { header.classList.toggle('shadow', window.scrollY > 10); };
   onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
 
   // Menú móvil
@@ -51,7 +50,7 @@
     vids.forEach(function (v) { vo.observe(v); });
   }
 
-  // "Consultar precio" preselecciona el interés en el formulario
+  // "data-interes" preselecciona el interés en el formulario
   var interes = document.getElementById('interes');
   document.querySelectorAll('[data-interes]').forEach(function (a) {
     a.addEventListener('click', function () {
@@ -62,22 +61,24 @@
     });
   });
 
-  // Formulario: arma un email (sitio estático, sin servidor)
+  // Formulario: arma el mensaje y abre WhatsApp (sitio estático, sin servidor)
   var form = document.getElementById('form-contacto');
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
     var ok = true;
     form.querySelectorAll('[required]').forEach(function (f) {
-      var bad = !f.value.trim() || (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(f.value));
+      var bad = !f.value.trim();
       f.classList.toggle('invalid', bad); f.setAttribute('aria-invalid', bad); if (bad) ok = false;
     });
     var note = form.querySelector('.form-note');
-    if (!ok) { note.textContent = 'Revisá los campos marcados: nombre, email y mensaje son obligatorios.'; return; }
+    if (!ok) { note.textContent = 'Completá tu nombre y el mensaje.'; return; }
     var d = new FormData(form);
-    var body = 'Nombre: ' + d.get('nombre') + '\nEmail: ' + d.get('email') + '\nTeléfono: ' + d.get('telefono') +
-      '\nPaís: ' + d.get('pais') + '\nEmpresa: ' + d.get('empresa') + '\nInteresado en: ' + d.get('interes') + '\n\n' + d.get('mensaje');
-    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Consulta web: ' + d.get('interes')) + '&body=' + encodeURIComponent(body);
-    note.textContent = '¡Gracias! Se abrió tu aplicación de correo para enviar la consulta.';
+    var txt = 'Hola Familia Giordana, soy ' + d.get('nombre').trim();
+    if (d.get('empresa').trim()) txt += ' (' + d.get('empresa').trim() + ')';
+    if (d.get('pais').trim()) txt += ', de ' + d.get('pais').trim();
+    txt += '.\nInterés: ' + d.get('interes') + '\n\n' + d.get('mensaje').trim();
+    window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(txt), '_blank', 'noopener');
+    note.textContent = '¡Gracias! Se abrió WhatsApp con tu consulta.';
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();

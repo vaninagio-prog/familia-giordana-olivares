@@ -2,7 +2,7 @@
   --gold:#BCAA6D; --gold-d:#9C8A4E; --gold-l:#E6DCB8;
   --ink:#0A1316; --ink-2:#1A2422; --olive:#3E4A2E; --olive-d:#2A3320;
   --cream:#F7F3EA; --sand:#EFE8D8; --text:#333333; --muted:#797B78; --line:#E2DACA;
-  --serif:"Cormorant Garamond", Georgia, serif; --sans:"Jost", system-ui, -apple-system, Segoe UI, sans-serif;
+  --serif:"Cormorant Garamond", Georgia, serif; --sans:"Source Sans 3", system-ui, -apple-system, Segoe UI, sans-serif;
   --r:18px; --shadow:0 20px 50px -25px rgba(10,19,22,.35);
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -56,7 +56,7 @@ p{margin:0 0 1em}
 .hero .eyebrow{color:var(--gold-l)}
 .hero h1{color:#fff;font-size:clamp(3rem,8vw,6.4rem);font-weight:500;margin-bottom:.35em}
 .hero h1 em{color:var(--gold);font-style:italic}
-.hero__lead{max-width:560px;font-size:1.15rem;font-weight:300;color:rgba(255,255,255,.9)}
+.hero__lead{max-width:560px;font-size:1.15rem;font-weight:400;color:rgba(255,255,255,.9)}
 .hero__ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
 .hero__scroll{position:absolute;bottom:2rem;left:50%;translate:-50% 0;width:26px;height:42px;border:1.5px solid rgba(255,255,255,.6);border-radius:20px}
 .hero__scroll span{position:absolute;left:50%;top:8px;width:4px;height:8px;border-radius:2px;background:#fff;translate:-50% 0;animation:sc 1.8s infinite}
@@ -68,7 +68,7 @@ p{margin:0 0 1em}
 .stat{border-left:1px solid rgba(188,170,109,.35);padding-left:1.4rem}
 .stat__num{font-family:var(--serif);font-size:3.2rem;color:var(--gold);font-weight:600;line-height:1}
 .stat__unit{font-family:var(--serif);font-size:1.4rem;color:var(--gold-l);margin-left:.3rem}
-.stat p{margin:.5rem 0 0;color:rgba(255,255,255,.72);font-size:.92rem;font-weight:300}
+.stat p{margin:.5rem 0 0;color:rgba(255,255,255,.72);font-size:.92rem;font-weight:400}
 
 .section{padding:clamp(4.5rem,9vw,8rem) 0}
 .section-head{max-width:760px;margin:0 auto 3.5rem;text-align:center}
@@ -157,14 +157,6 @@ figcaption strong{display:block;font-family:var(--serif);font-size:1.3rem;color:
 .cert-badge{font-family:var(--serif);font-weight:700;font-size:1.6rem;color:var(--olive-d);letter-spacing:.04em}
 .certs__note{color:rgba(255,255,255,.6);font-size:.92rem;max-width:720px;margin-inline:auto}
 
-/* visitas */
-.visitas{position:relative;padding:clamp(6rem,12vw,10rem) 0;color:#fff;text-align:center;overflow:hidden}
-.visitas__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.visitas__overlay{position:absolute;inset:0;background:rgba(10,19,22,.6)}
-.visitas__content{position:relative;max-width:720px}
-.visitas h2{color:#fff}
-.visitas .eyebrow{color:var(--gold-l)}
-.visitas p{font-size:1.12rem;color:rgba(255,255,255,.9);margin-bottom:2rem}
 
 /* contacto */
 .contacto{background:var(--cream)}
@@ -244,7 +236,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
   .hero__ctas .btn{width:100%;justify-content:center}
 }
 .split__media img{max-height:640px;width:100%;object-fit:contain}
-.hero__bg,.visitas__bg,.product__img img{height:100%}
+.hero__bg,.product__img img{height:100%}
 .olivares::before{mix-blend-mode:multiply;opacity:.18}
 @media (max-width:560px){
   .hero h1{font-size:2.6rem}
@@ -269,14 +261,10 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
 .olive-shop ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.35rem 1rem}
 .olive-shop a{color:var(--olive);text-decoration:none;font-size:.92rem;font-weight:500}
 .olive-shop a:hover{color:var(--gold-d)}
-.visitas__info{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:1.8rem 0;padding:1.4rem 1.6rem;background:rgba(10,19,22,.45);border:1px solid rgba(188,170,109,.4);border-radius:var(--r);backdrop-filter:blur(4px)}
-.visitas__info p{margin:0 0 .4rem}
-.visitas__label{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--gold)}
 .hours{list-style:none;padding:0;margin:0;display:grid;gap:.35rem}
 .hours li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:.3rem}
 .hours li:last-child{border-bottom:0;opacity:.75}
 .link-light{color:var(--gold);text-decoration:none;font-weight:500}
-.visitas__ctas{display:flex;flex-wrap:wrap;gap:.8rem}
 .contact-link{display:inline-block;margin-top:.2rem;font-size:.9rem;color:var(--gold-d)!important}
 .contact-ctas{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
 .btn--outline{background:transparent;color:var(--olive-d);border-color:var(--gold);margin-top:1rem}
@@ -286,8 +274,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
 .footer-hours{font-size:.9rem;opacity:.8}
 @media (max-width:1024px){.nav{gap:1.3rem}}
 @media (max-width:860px){.nav-socials{margin:0}.nav-socials a,.site-header.scrolled .nav-socials a{color:#fff;border-color:rgba(255,255,255,.45)}}
-@media (max-width:560px){.visitas__info{grid-template-columns:1fr;gap:1.2rem}.olive-shop ul{grid-template-columns:1fr}.map-btn{right:1.2rem;bottom:.8rem}}
-.visitas__ctas{justify-content:center}.visitas__info{text-align:left}
+@media (max-width:560px){.olive-shop ul{grid-template-columns:1fr}.map-btn{right:1.2rem;bottom:.8rem}}
 
 /* ---- v3: precios Roldán ---- */
 .product__price{margin:.2rem 0 .8rem;display:flex;flex-direction:column}
@@ -303,3 +290,49 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);bo
 .olive-shop li a{display:flex;justify-content:space-between;gap:.6rem}
 .olive-shop li b{font-weight:600;color:var(--olive-d);white-space:nowrap}
 .olive-shop ul{grid-template-columns:1fr}
+
+/* ---- v4: header sólido, tipografía y textos compactos ---- */
+body{font-size:17px;line-height:1.65;color:#2B2F2C}
+.site-header,.site-header.scrolled{background:rgba(247,243,234,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(10,19,22,.08);padding:.5rem 0}
+.site-header.shadow{box-shadow:0 8px 24px -16px rgba(0,0,0,.45)}
+.site-header .logo{height:52px}
+.site-header .logo--light{display:none}
+.site-header .logo--dark{display:block}
+.site-header .nav a:not(.btn){color:var(--ink);font-weight:500}
+.site-header .nav a:not(.btn):hover{color:var(--gold-d)}
+.site-header .nav-toggle span{background:var(--ink)}
+.site-header .nav-socials a{color:var(--ink);border-color:rgba(10,19,22,.3)}
+.hero__content{padding-top:9rem}
+.hero__lead{font-size:1.2rem}
+.stat p{font-size:1rem}
+.section-head p:last-child{font-size:1.1rem}
+h3{font-weight:600}
+.product h3{font-size:2.1rem}
+.notes{margin:0 0 1rem;padding-top:.8rem;border-top:1px solid var(--line);font-size:.95rem;line-height:1.5}
+.notes dt{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-d);font-weight:600;margin-top:.6rem}
+.notes dt:first-child{margin-top:0}
+.notes dd{color:#3d413e;margin:.15rem 0 0}
+.product__price{margin:0 0 .7rem}
+.product__wa,.product__buy{font-size:.95rem}
+.shop-cta p{font-size:.95rem;color:var(--muted)}
+figcaption{font-size:.95rem}
+.olive-shop__title{font-size:.78rem}
+.olive-shop a{font-size:.98rem}
+.note-card p,.certs__note,.form-note{font-size:.95rem}
+.contact-list small{font-size:.75rem}
+label{font-size:.92rem}
+.opt{font-weight:400;color:var(--muted)}
+.contact-form .btn--wa{margin-top:.4rem}
+.site-footer{font-size:.98rem}
+@media (max-width:860px){
+  .site-header,.site-header.scrolled{background:#F7F3EA;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .site-header .logo{height:44px}
+  .nav{height:100vh;height:100dvh;overflow-y:auto}
+  .site-header .nav a:not(.btn){color:#fff}
+  .site-header .nav-socials a{color:#fff;border-color:rgba(255,255,255,.45)}
+  .site-header .nav-toggle[aria-expanded="true"] span{background:#fff}
+  .hero__content{padding-top:7rem}
+}
+@media (max-width:560px){body{font-size:16.5px}}
+.lines{align-items:start}
+.product__tag{font-weight:600;font-size:1.2rem}
