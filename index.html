@@ -20,7 +20,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/hero-olivares.webp">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script type="application/ld+json">
@@ -45,49 +45,54 @@
   </script>
 </head>
 <body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
 
   <header class="site-header" id="top">
     <div class="container nav-wrap">
-      <a href="#top" class="brand" aria-label="Familia Giordana Olivares, inicio">
-        <img src="assets/img/logo-claro.svg" alt="Familia Giordana Olivares" class="logo logo--light" width="180" height="104">
+      <a href="#top" class="brand" aria-label="Familia Giordana Olivares, inicio" data-i18n-aria-label="aria.home">
+        <img src="assets/img/logo-claro.svg" alt="Familia Giordana Olivares" data-i18n-alt="alt.logo" class="logo logo--light" width="180" height="104">
         <img src="assets/img/logo-oscuro.svg" alt="" aria-hidden="true" class="logo logo--dark" width="180" height="104">
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <div class="lang" role="group" aria-label="Idioma / Language / 语言">
+        <button type="button" data-lang="es" lang="es" aria-pressed="true" title="Español">ES</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false" title="English">EN</button>
+        <button type="button" data-lang="zh" lang="zh-Hans" aria-pressed="false" title="简体中文">中文</button>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-i18n-aria-label="aria.menuOpen">
         <span></span><span></span><span></span>
       </button>
-      <nav id="menu" class="nav" aria-label="Principal">
-        <a href="#historia">Nuestra historia</a>
-        <a href="#olivares">Olivares</a>
-        <a href="#productos">Productos</a>
-        <a href="#exportacion">Exportación</a>
-        <a href="#contacto" class="btn btn--small">Contacto</a>
-        <div class="nav-socials"><a href="https://www.instagram.com/familia_giordana_olivares" target="_blank" rel="noopener" aria-label="Instagram de Familia Giordana Olivares"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM21.9 7.1c-.1-1.6-.4-3-1.6-4.2S17.6 1.3 16 1.2C14.3 1.1 9.7 1.1 8 1.2c-1.6.1-3 .4-4.2 1.6S2.2 5.5 2.1 7.1C2 8.8 2 13.2 2.1 14.9c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.7.1 6.3.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.7.1-6.1 0-7.8Zm-2.2 9.6a3.3 3.3 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.5.1-5.7-.4a3.3 3.3 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.7s-.1-4.5.4-5.7A3.3 3.3 0 0 1 6.5 3.5c1.3-.5 4.3-.4 5.7-.4s4.5-.1 5.7.4a3.3 3.3 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.5-.4 5.7Z"/></svg></a><a href="https://www.linkedin.com/showcase/familia-giordana-olivares/" target="_blank" rel="noopener" aria-label="LinkedIn de Familia Giordana Olivares"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a></div>
+      <nav id="menu" class="nav" aria-label="Principal" data-i18n-aria-label="aria.nav">
+        <a href="#historia" data-i18n="nav.historia">Nuestra historia</a>
+        <a href="#olivares" data-i18n="nav.olivares">Olivares</a>
+        <a href="#productos" data-i18n="nav.productos">Productos</a>
+        <a href="#exportacion" data-i18n="nav.export">Exportación</a>
+        <a href="#contacto" class="btn btn--small" data-i18n="nav.contacto">Contacto</a>
+        <div class="nav-socials"><a href="https://www.instagram.com/familia_giordana_olivares" target="_blank" rel="noopener" aria-label="Instagram de Familia Giordana Olivares" data-i18n-aria-label="aria.ig"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM21.9 7.1c-.1-1.6-.4-3-1.6-4.2S17.6 1.3 16 1.2C14.3 1.1 9.7 1.1 8 1.2c-1.6.1-3 .4-4.2 1.6S2.2 5.5 2.1 7.1C2 8.8 2 13.2 2.1 14.9c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.7.1 6.3.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.7.1-6.1 0-7.8Zm-2.2 9.6a3.3 3.3 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.5.1-5.7-.4a3.3 3.3 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.7s-.1-4.5.4-5.7A3.3 3.3 0 0 1 6.5 3.5c1.3-.5 4.3-.4 5.7-.4s4.5-.1 5.7.4a3.3 3.3 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.5-.4 5.7Z"/></svg></a><a href="https://www.linkedin.com/showcase/familia-giordana-olivares/" target="_blank" rel="noopener" aria-label="LinkedIn de Familia Giordana Olivares" data-i18n-aria-label="aria.li"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a></div>
       </nav>
     </div>
   </header>
 
   <main id="contenido">
     <!-- HERO -->
-    <section class="hero" aria-label="Presentación">
-      <img class="hero__bg" src="assets/img/hero-olivares.webp" alt="Hileras de olivos al pie de las sierras riojanas" fetchpriority="high">
+    <section class="hero" aria-label="Presentación" data-i18n-aria-label="aria.hero">
+      <img class="hero__bg" src="assets/img/hero-olivares.webp" alt="Hileras de olivos al pie de las sierras riojanas" data-i18n-alt="alt.hero" fetchpriority="high">
       <div class="hero__overlay"></div>
       <div class="container hero__content">
-        <h1>Tu corazón<br><em>en nuestras manos.</em></h1>
-        <p class="hero__lead">Hacemos aceite de oliva extra virgen y aceitunas de mesa en nuestra finca de Vichigasta, La Rioja, al pie del Famatina.</p>
+        <h1 data-i18n="hero.title">Tu corazón<br><em>en nuestras manos.</em></h1>
+        <p class="hero__lead" data-i18n="hero.lead">Hacemos aceite de oliva extra virgen y aceitunas de mesa en nuestra finca de Vichigasta, La Rioja, al pie del Famatina.</p>
         <div class="hero__ctas">
-          <a href="#productos" class="btn">Ver productos</a>
-          <a href="#contacto" class="btn btn--ghost">Escribinos</a>
+          <a href="#productos" class="btn" data-i18n="hero.cta1">Ver productos</a>
+          <a href="#contacto" class="btn btn--ghost" data-i18n="hero.cta2">Escribinos</a>
         </div>
       </div>
-      <a href="#historia" class="hero__scroll" aria-label="Bajar a Nuestra historia"><span></span></a>
+      <a href="#historia" class="hero__scroll" aria-label="Bajar a Nuestra historia" data-i18n-aria-label="aria.scroll"><span></span></a>
     </section>
 
     <!-- LA FINCA EN UNA FRASE -->
-    <section class="banda" aria-label="La finca">
+    <section class="banda" aria-label="La finca" data-i18n-aria-label="aria.banda">
       <img class="banda__bg" src="assets/img/banda-olivares.webp" alt="" loading="lazy" width="1918" height="420">
       <div class="container">
-        <p class="banda__text reveal">Son <strong>900 hectáreas</strong> de olivos a <strong>800 metros</strong> sobre el nivel del mar, entre las sierras de Velasco y Vilgo.</p>
+        <p class="banda__text reveal" data-i18n="banda">Son <strong>900 hectáreas</strong> de olivos a <strong>800 metros</strong> sobre el nivel del mar, entre las sierras de Velasco y Vilgo.</p>
       </div>
     </section>
 
@@ -95,12 +100,12 @@
     <section class="section historia" id="historia">
       <div class="container split">
         <div class="split__media reveal">
-          <img src="assets/img/collage-finca.webp" alt="Collage de la finca: olivares con las sierras nevadas de fondo y aceitunas recién cosechadas" loading="lazy" width="1321" height="1405">
+          <img src="assets/img/collage-finca.webp" alt="Collage de la finca: olivares con las sierras nevadas de fondo y aceitunas recién cosechadas" data-i18n-alt="alt.collage" loading="lazy" width="1321" height="1405">
         </div>
         <div class="split__text reveal">
-          <h2>Somos Familia Giordana</h2>
-          <p>Somos la parte olivícola de <a href="https://vgagronegocios.com.ar/" target="_blank" rel="noopener">Grupo VG Agronegocios</a>, la empresa que Victor Giordana fundó en los años 80.</p>
-          <p>Cultivamos los olivos y elaboramos el aceite y las aceitunas en el mismo lugar, en Vichigasta, en pleno clima desértico riojano.</p>
+          <h2 data-i18n="hist.title">Somos Familia Giordana</h2>
+          <p data-i18n="hist.p1">Somos la parte olivícola de <a href="https://vgagronegocios.com.ar/" target="_blank" rel="noopener">Grupo VG Agronegocios</a>, la empresa que Victor Giordana fundó en los años 80.</p>
+          <p data-i18n="hist.p2">Cultivamos los olivos y elaboramos el aceite y las aceitunas en el mismo lugar, en Vichigasta, en pleno clima desértico riojano.</p>
         </div>
       </div>
     </section>
@@ -109,19 +114,19 @@
     <section class="section olivares" id="olivares">
       <div class="container">
         <div class="finca reveal">
-          <h2>Los olivares</h2>
+          <h2 data-i18n="oli.title">Los olivares</h2>
           <div class="finca__text">
-            <p>Tenemos 900 hectáreas plantadas en sistemas intensivos y superintensivos, con diez variedades: Arbequina, Coratina, Picual, Arbosana, Koroneiki, Barnea, Hojiblanca, Arauco, Manzanilla Fina y Naballi.</p>
+            <p data-i18n="oli.p">Tenemos 900 hectáreas plantadas en sistemas intensivos y superintensivos, con diez variedades: Arbequina, Coratina, Picual, Arbosana, Koroneiki, Barnea, Hojiblanca, Arauco, Manzanilla Fina y Naballi.</p>
           </div>
         </div>
 
         <div class="tech reveal">
           <div class="tech__video">
-            <video src="assets/video/tecnologia.mp4" poster="assets/img/poster-tecnologia.webp" muted loop playsinline preload="none" aria-label="Video de la planta de elaboración en la finca"></video>
+            <video src="assets/video/tecnologia.mp4" poster="assets/img/poster-tecnologia.webp" muted loop playsinline preload="none" aria-label="Video de la planta de elaboración en la finca" data-i18n-aria-label="aria.vidPlant"></video>
           </div>
           <div class="tech__text">
-            <h3>Nuestras plantas</h3>
-            <p>En la finca tenemos dos plantas propias: una de aceite y otra de aceitunas de mesa. Entre las dos pueden elaborar y almacenar 1600 toneladas de aceite y 6000 de aceitunas.</p>
+            <h3 data-i18n="oli.plantsTitle">Nuestras plantas</h3>
+            <p data-i18n="oli.plants">En la finca tenemos dos plantas propias: una de aceite y otra de aceitunas de mesa. Entre las dos pueden elaborar y almacenar 1600 toneladas de aceite y 6000 de aceitunas.</p>
           </div>
         </div>
       </div>
@@ -131,106 +136,106 @@
     <section class="section productos" id="productos">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Nuestros aceites</h2>
-          <p>Extra virgen, línea Giordana. Botellas de 500&nbsp;cc, en cajas de 6.</p>
+          <h2 data-i18n="prod.title">Nuestros aceites</h2>
+          <p data-i18n="prod.sub">Extra virgen, línea Giordana. Botellas de 500&nbsp;cc, en cajas de 6.</p>
         </div>
 
         <!-- Precios: de referencia, tomados de Roldán Online (roldanonline.com.ar). Actualizar si cambian. -->
         <div class="products">
           <article class="product reveal">
-            <div class="product__img"><img src="assets/img/botella-arbequina-escena.webp" alt="Botella de aceite de oliva extra virgen Giordana Arbequina" loading="lazy" width="874" height="1000"></div>
+            <div class="product__img"><img src="assets/img/botella-arbequina-escena.webp" alt="Botella de aceite de oliva extra virgen Giordana Arbequina" data-i18n-alt="alt.arb" loading="lazy" width="874" height="1000"></div>
             <div class="product__body">
               <h3>Arbequina</h3>
-              <p class="product__tag">Suave y delicado</p>
-              <details class="notes-wrap"><summary>Perfil y maridajes</summary><dl class="notes"><dt>Perfil</dt><dd>Frutado suave: manzana, hierbas frescas, almendra. Dulce, poco amargo y picante.</dd><dt>Maridajes</dt><dd>Ensaladas, puré, zapallo, repostería.</dd></dl></details>
+              <p class="product__tag" data-i18n="prod.arb.tag">Suave y delicado</p>
+              <details class="notes-wrap"><summary data-i18n="prod.notes">Perfil y maridajes</summary><div class="notes-body"><dl class="notes"><dt data-i18n="prod.profile">Perfil</dt><dd data-i18n="prod.arb.profile">Frutado suave: manzana, hierbas frescas, almendra. Dulce, poco amargo y picante.</dd><dt data-i18n="prod.pairings">Maridajes</dt><dd data-i18n="prod.arb.pair">Ensaladas, puré, zapallo, repostería.</dd></dl></div></details>
               <p class="product__price"><span>$22.499,99</span></p>
-              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-arbequina-giordana-500ml/" target="_blank" rel="noopener">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Arbequina 500 cc.">WhatsApp</a></div>
+              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-arbequina-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Arbequina 500 cc." data-i18n-data-wa-msg="wa.arb">WhatsApp</a></div>
             </div>
           </article>
 
           <article class="product reveal">
-            <div class="product__img"><img src="assets/img/botella-coratina-escena.webp" alt="Botella de aceite de oliva extra virgen Giordana Coratina" loading="lazy" width="846" height="1000"></div>
+            <div class="product__img"><img src="assets/img/botella-coratina-escena.webp" alt="Botella de aceite de oliva extra virgen Giordana Coratina" data-i18n-alt="alt.cor" loading="lazy" width="846" height="1000"></div>
             <div class="product__body">
               <h3>Coratina</h3>
-              <p class="product__tag">Intenso y complejo</p>
-              <details class="notes-wrap"><summary>Perfil y maridajes</summary><dl class="notes"><dt>Perfil</dt><dd>Muy aromático: pasto, achicoria, rúcula, pimienta verde. Intenso, amargo y picante medios.</dd><dt>Maridajes</dt><dd>Carnes rojas, cordero, cerdo, verduras asadas, pastas.</dd></dl></details>
+              <p class="product__tag" data-i18n="prod.cor.tag">Intenso y complejo</p>
+              <details class="notes-wrap"><summary data-i18n="prod.notes">Perfil y maridajes</summary><div class="notes-body"><dl class="notes"><dt data-i18n="prod.profile">Perfil</dt><dd data-i18n="prod.cor.profile">Muy aromático: pasto, achicoria, rúcula, pimienta verde. Intenso, amargo y picante medios.</dd><dt data-i18n="prod.pairings">Maridajes</dt><dd data-i18n="prod.cor.pair">Carnes rojas, cordero, cerdo, verduras asadas, pastas.</dd></dl></div></details>
               <p class="product__price"><span>$22.499,99</span></p>
-              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-coratina-giordana-500ml/" target="_blank" rel="noopener">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Coratina 500 cc.">WhatsApp</a></div>
+              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-coratina-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Coratina 500 cc." data-i18n-data-wa-msg="wa.cor">WhatsApp</a></div>
             </div>
           </article>
 
           <article class="product reveal">
-            <div class="product__img"><img src="assets/img/botella-picual-escena.webp" alt="Botella de aceite de oliva extra virgen Giordana Picual" loading="lazy" width="862" height="1000"></div>
+            <div class="product__img"><img src="assets/img/botella-picual-escena.webp" alt="Botella de aceite de oliva extra virgen Giordana Picual" data-i18n-alt="alt.pic" loading="lazy" width="862" height="1000"></div>
             <div class="product__body">
               <h3>Picual</h3>
-              <p class="product__tag">Estructurado y persistente</p>
-              <details class="notes-wrap"><summary>Perfil y maridajes</summary><dl class="notes"><dt>Perfil</dt><dd>Frutado verde intenso: hoja de olivo, higuera, alcachofa, cítricos. Ligero amargo y picante.</dd><dt>Maridajes</dt><dd>Jamones, quesos, salteados, frituras (hasta 180&nbsp;°C).</dd></dl></details>
+              <p class="product__tag" data-i18n="prod.pic.tag">Estructurado y persistente</p>
+              <details class="notes-wrap"><summary data-i18n="prod.notes">Perfil y maridajes</summary><div class="notes-body"><dl class="notes"><dt data-i18n="prod.profile">Perfil</dt><dd data-i18n="prod.pic.profile">Frutado verde intenso: hoja de olivo, higuera, alcachofa, cítricos. Ligero amargo y picante.</dd><dt data-i18n="prod.pairings">Maridajes</dt><dd data-i18n="prod.pic.pair">Jamones, quesos, salteados, frituras (hasta 180&nbsp;°C).</dd></dl></div></details>
               <p class="product__price"><span>$22.499,99</span></p>
-              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-picual-giordana-500ml/" target="_blank" rel="noopener">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Picual 500 cc.">WhatsApp</a></div>
+              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-picual-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Picual 500 cc." data-i18n-data-wa-msg="wa.pic">WhatsApp</a></div>
             </div>
           </article>
 
           <article class="product reveal">
-            <div class="product__img"><img src="assets/img/botella-blend-escena.webp" alt="Botella de aceite de oliva extra virgen Giordana Blend" loading="lazy" width="872" height="1000"></div>
+            <div class="product__img"><img src="assets/img/botella-blend-escena.webp" alt="Botella de aceite de oliva extra virgen Giordana Blend" data-i18n-alt="alt.ble" loading="lazy" width="872" height="1000"></div>
             <div class="product__body">
               <h3>Blend</h3>
-              <p class="product__tag">Equilibrado y fresco</p>
-              <details class="notes-wrap"><summary>Perfil y maridajes</summary><dl class="notes"><dt>Perfil</dt><dd>Frutado verde medio: hierbas, almendra, tomate, pimienta. Amargo y picante equilibrados.</dd><dt>Maridajes</dt><dd>Ensaladas verdes, verduras al vapor, pescados, carnes blancas.</dd></dl></details>
+              <p class="product__tag" data-i18n="prod.ble.tag">Equilibrado y fresco</p>
+              <details class="notes-wrap"><summary data-i18n="prod.notes">Perfil y maridajes</summary><div class="notes-body"><dl class="notes"><dt data-i18n="prod.profile">Perfil</dt><dd data-i18n="prod.ble.profile">Frutado verde medio: hierbas, almendra, tomate, pimienta. Amargo y picante equilibrados.</dd><dt data-i18n="prod.pairings">Maridajes</dt><dd data-i18n="prod.ble.pair">Ensaladas verdes, verduras al vapor, pescados, carnes blancas.</dd></dl></div></details>
               <p class="product__price"><span>$22.499,99</span></p>
-              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-giordana-500ml/" target="_blank" rel="noopener">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Blend 500 cc.">WhatsApp</a></div>
+              <div class="product__actions"><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-giordana-500ml/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a><a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Giordana Blend 500 cc." data-i18n-data-wa-msg="wa.ble">WhatsApp</a></div>
             </div>
           </article>
         </div>
 
         <div class="shop-cta reveal">
-          <p>Precios de referencia en Roldán Online.</p>
-          <a class="btn" href="https://roldanonline.com.ar/Categorias/giordana-olivares/" target="_blank" rel="noopener">Comprar online en Roldán ↗</a>
+          <p data-i18n="prod.refPrices">Precios de referencia en Roldán Online.</p>
+          <a class="btn" href="https://roldanonline.com.ar/Categorias/giordana-olivares/" target="_blank" rel="noopener" data-i18n="prod.buyOnline">Comprar online en Roldán ↗</a>
         </div>
 
         <div class="lines">
           <article class="line-card reveal">
             <div class="line-card__head">
-                            <h3>Don Dileto en bidón</h3>
+                            <h3 data-i18n="dd.title">Don Dileto en bidón</h3>
                           </div>
             <div class="line-card__items">
               <figure>
-                <img src="assets/img/bb5l_2.webp" alt="Bidón de 5 litros de aceite de oliva Don Dileto" loading="lazy" width="256" height="256">
-                <figcaption><strong>Don Dileto 5 L</strong><span>Frutado verde medio, equilibrado.</span><span class="mini-price">$121.999,99</span><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-extra-virgen-dondileto-5lt/" target="_blank" rel="noopener">Comprar en Roldán ↗</a></figcaption>
+                <img src="assets/img/bb5l_2.webp" alt="Bidón de 5 litros de aceite de oliva Don Dileto" data-i18n-alt="alt.dd5" loading="lazy" width="256" height="256">
+                <figcaption><strong>Don Dileto 5 L</strong><span data-i18n="dd.5l">Frutado verde medio, equilibrado.</span><span class="mini-price">$121.999,99</span><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-extra-virgen-dondileto-5lt/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a></figcaption>
               </figure>
               <figure>
-                <img src="assets/img/dondileto-coratina.webp" alt="Bidón de 2 litros de aceite de oliva Don Dileto" loading="lazy" width="448" height="454">
-                <figcaption><strong>Don Dileto 2 L</strong><span>Extra virgen.</span><span class="mini-price">$51.999,99</span><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-extra-virgen-dondileto-2lt/" target="_blank" rel="noopener">Comprar en Roldán ↗</a></figcaption>
+                <img src="assets/img/dondileto-coratina.webp" alt="Bidón de 2 litros de aceite de oliva Don Dileto" data-i18n-alt="alt.dd2" loading="lazy" width="448" height="454">
+                <figcaption><strong>Don Dileto 2 L</strong><span data-i18n="dd.2l">Extra virgen.</span><span class="mini-price">$51.999,99</span><a class="product__buy" href="https://roldanonline.com.ar/productos/aceite-de-oliva-extra-virgen-dondileto-2lt/" target="_blank" rel="noopener" data-i18n="prod.buy">Comprar en Roldán ↗</a></figcaption>
               </figure>
             </div>
-            <a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Don Dileto.">Consultar por WhatsApp</a>
+            <a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por el aceite de oliva Don Dileto." data-i18n-data-wa-msg="wa.dd" data-i18n="ask.wa">Consultar por WhatsApp</a>
           </article>
 
           <article class="line-card line-card--olives reveal">
             <div class="line-card__head">
-                            <h3>Aceitunas de mesa</h3>
-              <p>Marca Don Dileto, hechas en nuestra planta.</p>
+                            <h3 data-i18n="ol.title">Aceitunas de mesa</h3>
+              <p data-i18n="ol.sub">Marca Don Dileto, hechas en nuestra planta.</p>
             </div>
             <div class="olives">
-              <img src="assets/img/aceitunas-verdes.webp" alt="Frasco de aceitunas verdes Don Dileto" loading="lazy" width="448" height="454">
-              <img src="assets/img/aceitunas-negras.webp" alt="Frasco de aceitunas negras Don Dileto" loading="lazy" width="447" height="454">
+              <img src="assets/img/aceitunas-verdes.webp" alt="Frasco de aceitunas verdes Don Dileto" data-i18n-alt="alt.olGreen" loading="lazy" width="448" height="454">
+              <img src="assets/img/aceitunas-negras.webp" alt="Frasco de aceitunas negras Don Dileto" data-i18n-alt="alt.olBlack" loading="lazy" width="447" height="454">
             </div>
             <div class="olive-wholesale">
-              <p class="olive-shop__title">1&nbsp;kg y 5&nbsp;kg, en cajas de 6</p>
+              <p class="olive-shop__title" data-i18n="ol.wholesale">1&nbsp;kg y 5&nbsp;kg, en cajas de 6</p>
               <ul class="olive-types">
-                <li>Verdes</li><li>Negras</li><li>Rellenas</li><li>Rodajas</li>
+                <li data-i18n="ol.green">Verdes</li><li data-i18n="ol.black">Negras</li><li data-i18n="ol.stuffed">Rellenas</li><li data-i18n="ol.sliced">Rodajas</li>
               </ul>
-              <a class="product__cta js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar precio de aceitunas Don Dileto en 1 kg / 5 kg.">Consultar precio →</a>
+              <a class="product__cta js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar precio de aceitunas Don Dileto en 1 kg / 5 kg." data-i18n-data-wa-msg="wa.olPrice" data-i18n="ol.askPrice">Consultar precio →</a>
             </div>
             <div class="olive-shop">
-              <p class="olive-shop__title">En Roldán Online, 1,5&nbsp;kg</p>
+              <p class="olive-shop__title" data-i18n="ol.roldan">En Roldán Online, 1,5&nbsp;kg</p>
               <ul>
-                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-dondileto-1-5kg/" target="_blank" rel="noopener"><span>Aceitunas verdes ↗</span><b>$14.199,99</b></a></li>
-                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-descarozadas-dondileto-1-5kg/" target="_blank" rel="noopener"><span>Verdes descarozadas ↗</span><b>$15.999,99</b></a></li>
-                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-rodajas-dondileto-1-5kg/" target="_blank" rel="noopener"><span>Verdes en rodajas ↗</span><b>$15.999,99</b></a></li>
-                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-con-morron-dondileto-1-5kg/" target="_blank" rel="noopener"><span>Verdes con morrón ↗</span><b>$17.799,99</b></a></li>
+                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r1">Aceitunas verdes ↗</span><b>$14.199,99</b></a></li>
+                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-descarozadas-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r2">Verdes descarozadas ↗</span><b>$15.999,99</b></a></li>
+                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-rodajas-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r3">Verdes en rodajas ↗</span><b>$15.999,99</b></a></li>
+                <li><a href="https://roldanonline.com.ar/productos/aceitunas-verdes-con-morron-dondileto-1-5kg/" target="_blank" rel="noopener"><span data-i18n="ol.r4">Verdes con morrón ↗</span><b>$17.799,99</b></a></li>
               </ul>
             </div>
-            <a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por las aceitunas Don Dileto.">Consultar por WhatsApp</a>
+            <a class="product__wa js-wa" href="#contacto" data-wa-msg="Hola Familia Giordana, quiero consultar por las aceitunas Don Dileto." data-i18n-data-wa-msg="wa.ol" data-i18n="ask.wa">Consultar por WhatsApp</a>
           </article>
         </div>
       </div>
@@ -240,31 +245,31 @@
     <section class="section export" id="exportacion">
       <div class="container">
         <div class="section-head section-head--light reveal">
-          <h2>Exportación</h2>
-          <p>Cerca del 90% de nuestra producción se exporta a granel.</p>
+          <h2 data-i18n="nav.export">Exportación</h2>
+          <p data-i18n="exp.sub">Cerca del 90% de nuestra producción se exporta a granel.</p>
         </div>
         <div class="export__grid">
           <div class="export__map reveal">
-            <img src="assets/img/mapa-exportacion.webp" alt="Mapa con las rutas de exportación desde Argentina hacia Brasil, Uruguay, España, Estados Unidos, Sudáfrica y China" loading="lazy" width="1720" height="840">
+            <img src="assets/img/mapa-exportacion.webp" alt="Mapa con las rutas de exportación desde Argentina hacia Brasil, Uruguay, España, Estados Unidos, Sudáfrica y China" data-i18n-alt="alt.map" loading="lazy" width="1720" height="840">
             <ul class="countries">
-              <li>Brasil</li><li>Uruguay</li><li>España</li><li>Estados Unidos</li><li>Sudáfrica</li><li>China</li>
+              <li data-i18n="c.br">Brasil</li><li data-i18n="c.uy">Uruguay</li><li data-i18n="c.es">España</li><li data-i18n="c.us">Estados Unidos</li><li data-i18n="c.za">Sudáfrica</li><li data-i18n="c.cn">China</li>
             </ul>
           </div>
           <div class="export__video reveal">
-            <video src="assets/video/exportacion.mp4" poster="assets/img/poster-exportacion.webp" muted loop playsinline preload="none" aria-label="Video de la línea de selección de aceitunas"></video>
+            <video src="assets/video/exportacion.mp4" poster="assets/img/poster-exportacion.webp" muted loop playsinline preload="none" aria-label="Video de la línea de selección de aceitunas" data-i18n-aria-label="aria.vidExport"></video>
           </div>
         </div>
 
         <div class="certs reveal">
-          <h3>Certificaciones</h3>
+          <h3 data-i18n="cert.title">Certificaciones</h3>
           <ul class="certs__list">
             <li><span class="cert-badge">HACCP</span></li>
-            <li><span class="cert-badge">BPM</span></li>
-            <li><img src="assets/img/star-k-kosher-certification.webp" alt="Certificación Kosher Star-K" loading="lazy" width="179" height="219"></li>
-            <li><img src="assets/img/sin_gluten_legal-01-282x300.png" alt="Sin TACC" loading="lazy" width="282" height="300"></li>
-            <li><img src="assets/img/sustainably_Grown.png" alt="Certificación Sustainably Grown" loading="lazy" width="300" height="274"></li>
+            <li><span class="cert-badge" data-i18n="cert.bpm">BPM</span></li>
+            <li><img src="assets/img/star-k-kosher-certification.webp" alt="Certificación Kosher Star-K" data-i18n-alt="alt.kosher" loading="lazy" width="179" height="219"></li>
+            <li><img src="assets/img/sin_gluten_legal-01-282x300.png" alt="Sin TACC" data-i18n-alt="alt.tacc" loading="lazy" width="282" height="300"></li>
+            <li><img src="assets/img/sustainably_Grown.png" alt="Certificación Sustainably Grown" data-i18n-alt="alt.sg" loading="lazy" width="300" height="274"></li>
           </ul>
-          <p class="certs__note">Inocuidad, trazabilidad y producción sostenible certificadas.</p>
+          <p class="certs__note" data-i18n="cert.note">Inocuidad, trazabilidad y producción sostenible certificadas.</p>
           <!-- PENDIENTE: confirmar el estado de BPA (Buenas Prácticas Agrícolas); la web actual decía "en implementación". -->
         </div>
       </div>
@@ -274,47 +279,47 @@
     <section class="section contacto" id="contacto">
       <div class="container contact-grid">
         <div class="contact-info reveal">
-          <h2>Contacto</h2>
-          <p>Compras, distribución o exportación: escribinos por WhatsApp.</p>
+          <h2 data-i18n="nav.contacto">Contacto</h2>
+          <p data-i18n="contact.sub">Compras, distribución o exportación: escribinos por WhatsApp.</p>
           <ul class="contact-list">
-            <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></span><div><small>Teléfono / WhatsApp</small><a href="tel:+5493825524949">+54 9 3825 52-4949</a></div></li>
-            <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><small>Dirección</small><span>Ruta Nacional km 74 1166, F5374 Vichigasta, La Rioja</span> <a class="contact-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=-29.5792466,-67.4422533" target="_blank" rel="noopener">Cómo llegar ↗</a></div></li>
+            <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></span><div><small data-i18n="contact.phone">Teléfono / WhatsApp</small><a href="tel:+5493825524949">+54 9 3825 52-4949</a></div></li>
+            <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><small data-i18n="contact.address">Dirección</small><span>Ruta Nacional km 74 1166, F5374 Vichigasta, La Rioja</span> <a class="contact-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=-29.5792466,-67.4422533" target="_blank" rel="noopener" data-i18n="contact.directions">Cómo llegar ↗</a></div></li>
             <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></span><div><small>Instagram</small><a href="https://www.instagram.com/familia_giordana_olivares" target="_blank" rel="noopener">@familia_giordana_olivares</a></div></li>
             <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M11 17v-7M11 13.5a3 3 0 0 1 6 0V17"/></svg></span><div><small>LinkedIn</small><a href="https://www.linkedin.com/showcase/familia-giordana-olivares/" target="_blank" rel="noopener">Familia Giordana Olivares</a></div></li>
-            <li class="contact-hours"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><div><small>Horario de atención</small><span>Lunes a jueves de 6:30 a 16, viernes de 6:30 a 15. Sábados y domingos, cerrado.</span></div></li>
+            <li class="contact-hours"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><div><small data-i18n="contact.hoursLabel">Horario de atención</small><span data-i18n="contact.hours">Lunes a jueves de 6:30 a 16, viernes de 6:30 a 15. Sábados y domingos, cerrado.</span></div></li>
           </ul>
           <div class="contact-ctas">
           <a class="btn btn--wa js-wa" href="#contacto">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
-            Escribinos por WhatsApp
+            <span data-i18n="contact.waBtn">Escribinos por WhatsApp</span>
           </a>
-          <a class="btn btn--outline" href="https://roldanonline.com.ar/Categorias/giordana-olivares/" target="_blank" rel="noopener">Comprar online en Roldán ↗</a>
+          <a class="btn btn--outline" href="https://roldanonline.com.ar/Categorias/giordana-olivares/" target="_blank" rel="noopener" data-i18n="prod.buyOnline">Comprar online en Roldán ↗</a>
           </div>
         </div>
 
         <form class="contact-form reveal" id="form-contacto" novalidate>
-          <h3>Consulta por WhatsApp</h3>
+          <h3 data-i18n="form.title">Consulta por WhatsApp</h3>
           <div class="field-row">
-            <label>Nombre<input name="nombre" required autocomplete="name"></label>
-            <label>Empresa <span class="opt">(opcional)</span><input name="empresa" autocomplete="organization"></label>
+            <label><span data-i18n="form.name">Nombre</span><input name="nombre" required autocomplete="name"></label>
+            <label><span data-i18n="form.company">Empresa</span> <span class="opt" data-i18n="form.optional">(opcional)</span><input name="empresa" autocomplete="organization"></label>
           </div>
           <div class="field-row">
-            <label>País<input name="pais" autocomplete="country-name" value="Argentina"></label>
-            <label>Interés
+            <label><span data-i18n="form.country">País</span><input name="pais" autocomplete="country-name" value="Argentina"></label>
+            <label><span data-i18n="form.interest">Interés</span>
               <select name="interes" id="interes">
-                <option>Compra de productos</option><option>Exportación / granel</option><option>Distribución</option><option>Arbequina</option><option>Coratina</option><option>Picual</option><option>Blend</option><option>Don Dileto</option><option>Aceitunas</option><option>Otro</option>
+                <option value="Compra de productos" data-i18n="opt.buy">Compra de productos</option><option value="Exportación / granel" data-i18n="opt.export">Exportación / granel</option><option value="Distribución" data-i18n="opt.distrib">Distribución</option><option value="Arbequina" data-i18n="opt.arbequina">Arbequina</option><option value="Coratina" data-i18n="opt.coratina">Coratina</option><option value="Picual" data-i18n="opt.picual">Picual</option><option value="Blend" data-i18n="opt.blend">Blend</option><option value="Don Dileto" data-i18n="opt.dondileto">Don Dileto</option><option value="Aceitunas" data-i18n="opt.olives">Aceitunas</option><option value="Otro" data-i18n="opt.other">Otro</option>
               </select>
             </label>
           </div>
-          <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
-          <button type="submit" class="btn btn--wa btn--full">Enviar por WhatsApp</button>
-          <p class="form-note" role="status" aria-live="polite">Se abrirá WhatsApp con tu consulta lista para enviar.</p>
+          <label><span data-i18n="form.message">Mensaje</span><textarea name="mensaje" rows="4" required></textarea></label>
+          <button type="submit" class="btn btn--wa btn--full" data-i18n="form.submit">Enviar por WhatsApp</button>
+          <p class="form-note" role="status" aria-live="polite" data-i18n="form.note">Se abrirá WhatsApp con tu consulta lista para enviar.</p>
         </form>
       </div>
 
       <div class="container map-wrap reveal">
-        <iframe title="Ubicación de Familia Giordana Olivares, Ruta Nacional km 74 1166, Vichigasta, La Rioja" src="https://maps.google.com/maps?q=-29.5792466,-67.4422533&amp;t=m&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <a class="btn map-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=-29.5792466,-67.4422533" target="_blank" rel="noopener">Cómo llegar ↗</a>
+        <iframe title="Ubicación de Familia Giordana Olivares, Ruta Nacional km 74 1166, Vichigasta, La Rioja" data-i18n-title="title.map" src="https://maps.google.com/maps?q=-29.5792466,-67.4422533&amp;t=m&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="btn map-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=-29.5792466,-67.4422533" target="_blank" rel="noopener" data-i18n="contact.directions">Cómo llegar ↗</a>
       </div>
     </section>
   </main>
@@ -322,40 +327,41 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <img src="assets/img/logo-claro.svg" alt="Familia Giordana Olivares" width="200" height="115" loading="lazy">
-        <p class="footer-tag">Tu corazón en nuestras manos.</p>
+        <img src="assets/img/logo-claro.svg" alt="Familia Giordana Olivares" data-i18n-alt="alt.logo" width="200" height="115" loading="lazy">
+        <p class="footer-tag" data-i18n="foot.tag">Tu corazón en nuestras manos.</p>
       </div>
-      <nav aria-label="Enlaces del pie">
-        <h4>Enlaces</h4>
-        <a href="#historia">Nuestra historia</a>
-        <a href="#olivares">Los olivares</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
+      <nav aria-label="Enlaces del pie" data-i18n-aria-label="aria.footNav">
+        <h4 data-i18n="foot.links">Enlaces</h4>
+        <a href="#historia" data-i18n="nav.historia">Nuestra historia</a>
+        <a href="#olivares" data-i18n="oli.title">Los olivares</a>
+        <a href="#productos" data-i18n="nav.productos">Productos</a>
+        <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
       </nav>
       <div>
-        <h4>Categorías</h4>
-        <a href="#productos">Aceite de oliva extra virgen</a>
-        <a href="#productos">Aceitunas</a>
-        <a href="https://roldanonline.com.ar/Categorias/giordana-olivares/" target="_blank" rel="noopener">Tienda online (Roldán) ↗</a>
+        <h4 data-i18n="foot.cats">Categorías</h4>
+        <a href="#productos" data-i18n="foot.evoo">Aceite de oliva extra virgen</a>
+        <a href="#productos" data-i18n="foot.olives">Aceitunas</a>
+        <a href="https://roldanonline.com.ar/Categorias/giordana-olivares/" target="_blank" rel="noopener" data-i18n="foot.shop">Tienda online (Roldán) ↗</a>
       </div>
       <div>
-        <h4>Contacto</h4>
+        <h4 data-i18n="nav.contacto">Contacto</h4>
         <p>Ruta Nacional km 74 1166<br>F5374 Vichigasta, La Rioja</p>
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=-29.5792466,-67.4422533" target="_blank" rel="noopener">Cómo llegar ↗</a>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=-29.5792466,-67.4422533" target="_blank" rel="noopener" data-i18n="contact.directions">Cómo llegar ↗</a>
         <a href="tel:+5493825524949">+54 9 3825 52-4949</a>
-        <p class="footer-hours">Lunes a jueves, 6:30 a 16<br>Viernes, 6:30 a 15</p>
-        <div class="socials"><a href="https://www.instagram.com/familia_giordana_olivares" target="_blank" rel="noopener" aria-label="Instagram de Familia Giordana Olivares"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM21.9 7.1c-.1-1.6-.4-3-1.6-4.2S17.6 1.3 16 1.2C14.3 1.1 9.7 1.1 8 1.2c-1.6.1-3 .4-4.2 1.6S2.2 5.5 2.1 7.1C2 8.8 2 13.2 2.1 14.9c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.7.1 6.3.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.7.1-6.1 0-7.8Zm-2.2 9.6a3.3 3.3 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.5.1-5.7-.4a3.3 3.3 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.7s-.1-4.5.4-5.7A3.3 3.3 0 0 1 6.5 3.5c1.3-.5 4.3-.4 5.7-.4s4.5-.1 5.7.4a3.3 3.3 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.5-.4 5.7Z"/></svg></a><a href="https://www.linkedin.com/showcase/familia-giordana-olivares/" target="_blank" rel="noopener" aria-label="LinkedIn de Familia Giordana Olivares"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a></div>
+        <p class="footer-hours" data-i18n="foot.hours">Lunes a jueves, 6:30 a 16<br>Viernes, 6:30 a 15</p>
+        <div class="socials"><a href="https://www.instagram.com/familia_giordana_olivares" target="_blank" rel="noopener" aria-label="Instagram de Familia Giordana Olivares" data-i18n-aria-label="aria.ig"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM21.9 7.1c-.1-1.6-.4-3-1.6-4.2S17.6 1.3 16 1.2C14.3 1.1 9.7 1.1 8 1.2c-1.6.1-3 .4-4.2 1.6S2.2 5.5 2.1 7.1C2 8.8 2 13.2 2.1 14.9c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.7.1 6.3.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.7.1-6.1 0-7.8Zm-2.2 9.6a3.3 3.3 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.5.1-5.7-.4a3.3 3.3 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.7s-.1-4.5.4-5.7A3.3 3.3 0 0 1 6.5 3.5c1.3-.5 4.3-.4 5.7-.4s4.5-.1 5.7.4a3.3 3.3 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.5-.4 5.7Z"/></svg></a><a href="https://www.linkedin.com/showcase/familia-giordana-olivares/" target="_blank" rel="noopener" aria-label="LinkedIn de Familia Giordana Olivares" data-i18n-aria-label="aria.li"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a></div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© <span id="year">2026</span> Familia Giordana Olivares, parte de <a href="https://vgagronegocios.com.ar/" target="_blank" rel="noopener">Grupo VG Agronegocios</a></p>
+      <p>© <span id="year">2026</span> Familia Giordana Olivares, <span data-i18n="foot.partOf">parte de</span> <a href="https://vgagronegocios.com.ar/" target="_blank" rel="noopener">Grupo VG Agronegocios</a></p>
     </div>
   </footer>
 
-  <a class="wa-float js-wa" href="#contacto" aria-label="Escribinos por WhatsApp">
+  <a class="wa-float js-wa" href="#contacto" aria-label="Escribinos por WhatsApp" data-i18n-aria-label="aria.waFloat">
     <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
   </a>
 
+  <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
